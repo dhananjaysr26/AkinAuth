@@ -1,0 +1,20 @@
+version: "3.4"
+
+services:
+  api-gateway:
+    build: ./api-gateway
+    container_name: API-GATEWAY
+    ports:
+      - 8080:80
+    depends_on:
+      - auth_server
+      - backend_server
+
+  auth_server:
+    build: ./auth-server
+    container_name: auth_server
+
+  backend_server:
+    build: ./server
+    container_name: backend_server
+
