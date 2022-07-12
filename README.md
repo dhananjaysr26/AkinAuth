@@ -1,2 +1,6 @@
 # AkinAuth
- Auth
+
+Auth
+
+To Run
+docker-compose up
